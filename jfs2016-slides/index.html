@@ -71,10 +71,6 @@
                 <h3>Table of contents</h3>
                 <ul>
                     <li>Motivation</li>
-                    <li>Comparison PDE to Bndtools</li>
-                    <li>Development Setup & Update</li>
-                    <li>Programming</li>
-                    <li>Conclusion</li>
                 </ul>
             </section>
 
@@ -82,26 +78,16 @@
                 <section id="motivation_0" data-markdown>
                     ### Motivation
 
-                    * PDE pain points
+                    * Java8
                     
-                    * Why bnd/Bndtools                  
+                    * Why OSGi enroute
+
+					*
+					
                 </section>
                 <section id="motivation_1" data-markdown>
-                    ### PDE pain points
-                    
-                    * [dependency management is difficult](https://bugs.eclipse.org/bugs/show_bug.cgi?id=73957)
-
-                    * target horror
-                    
-                        * configuration complex
-                        
-                        * reloading is not fail safe
-                        
-                    * launch configurations
-                    
-                        * what the hell has PDE loaded in the runtime
-                    
-                        * where do these runtime settings come from
+                    ### 
+					
                 </section>
                 <section id="motivation_2">
                     <h3>Why Bndtools</h3>
@@ -152,75 +138,21 @@
 
                 <section id="comparison_2" data-markdown>
                     ### IDE Bundle Handling
-                    
-                    *  PDE 
-
-                        * creates "virtual bundles" for execution Launches
-
-                        * PDE build/export required to create concrete jar files
-
-                    *  Bndtools  
-
-                        * creates physical jar file inside generated folder
-                        
-                        * launches execute this jar file inside runtime
                 </section>
             </section>
 
             <section id="challenges">
                 <section id="challenges_0" data-markdown>
                     ### Concurrent areas - Mixed-Mode
-                    
-                    * Project Build Path  
-
-                    * Project Interdependencies
-                        
-                        * PDE depends on BND  
-                        * BND depends on PDE  
-
-                    * Compiler Settings  
-
                     </section>
                 <section id="challenges_1" data-markdown>
                     ### Project Build Path
-                     
-                    * PDE
-
-                        * projects share a common target
-                        
-                        * high complexity selecting import-packages
-                        
-                    * Bndtools 
-                        
-                        * configured for each project 
-
-                        * reduces number of import-package
-                        
-                    * **bnd projects have a precise import-package scope**
                 </section>
                 <section id="challenges_2" data-markdown>
                     ### PDE depends on BND
-
-                    * OSGi dev with PDE target
-                            
-                        * BND creates generated/bundle.jar
-                        
-                        * p2 publisher generates p2 repo from bnd jar files 
-                        
-                        * include p2 repo in target and reload it
                 </section>
                 <section id="challenges_3" data-markdown>
                     ### BND depends on PDE
-
-                    * BND project depending on PDE bundle
-                    
-                        * PDE feature export/build creating p2 repo
-
-                        * obr repo indexing 
-
-                        * reference and refresh cnf
-                        
-                    * **Luckily we don't required this**
                 </section>
                 <section id="challenges_4">
                     <h3>Synchronize Compile Settings</h3>
@@ -311,21 +243,6 @@
                 </section>
                 <section id="development_1" data-markdown>
                     ### Mixed-Mode
-
-                    * After modifications on bnd bundles 
-                    
-                        1. bnd2pde build
-
-                        2. target reload required
-                        
-                        3. validation via view "TargetPlatform State"
-                    
-                    * Debugging source code editor is showing read-only bnd target bundles
-
-                        * editing impossible (uncommon behaviour)
-
-                        * open the appropriate source type with  
-                            Ctrl+Shift+T and CamelCase notation
                 </section>
                 <section id="development_2">
                     <h3>Coding</h3>
@@ -338,10 +255,6 @@
             <section>
                 <section id="conclusion_0" data-markdown>
                     ### Conclusion
-                    
-                    * Our Migration Progress
-                    
-                    * Migration Digest
                 </section>
 
                 <section id="conclusion_1" >
@@ -351,18 +264,6 @@
             
                 <section id="conclusion_2" data-markdown>
                     ### Migration Digest
-                    
-                    * Mixed-Mode is hard -&gt; try to migrate fast
-
-                    * Defaults are not ideal for Enterprise Environments
-                    
-                    * Bndtools Windows Committers wanted - Windows is special
-
-                    * Work is more comprehensible
-                    
-                    * Benefits for us exceeded the tooling problems
-                    
-                    ** Migration is feasible, but is not for free!**
                 </section>
             </section>
             
@@ -387,22 +288,13 @@
 						
 					* and patience in adopting new technologies
 
-				* Peter Kriens, Neil Bartlett, BJ Hargrave 
+				* Peter Kriens, BJ Hargrave, Neil Bartlett, Tim Ward
 
 				* and all other bnd/Bndtools/bindex commiter and contributors
 				
 				* [REVEAL.JS](http://lab.hakim.se/reveal-js/) - HTML presentations by Hakim El Hattab
 				</section>
 			
-				<section id="video_epic_split">
-                    <h3>Volvo Trucks - Making of ...</h3>
-                    <p>
-                        <iframe width="640" height="390" src="https://www.youtube.com/embed/T0P_Ded5cbs" frameborder="0" allowfullscreen></iframe>
-                    </p>
-                    <p>
-                        <small><a href="https://www.youtube.com/watch?v=M7FIvfx5J10" target="_blank">short version (1:16mn) - commercial spot only</a></small>
-                    </p>
-                </section>
                 <section id="links_Bndtools" data-markdown>
                     ### BND and Bndtools resources
                     
