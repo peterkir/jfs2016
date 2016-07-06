@@ -1,6 +1,6 @@
-Speaker Notes
+# Speaker Notes
 
-#1 
+#1 Title 
 
 Questions: 
 - Who of you owns a RasPi?
@@ -63,3 +63,10 @@ Questions:
 	* Tool Chain
 	* Documentation and Tutorials
 	* Community
+
+# 6.1 Tools
+Complete tool chain for development, scm and CI, CD included
+
+# 6.2 Eclipse 
+* very flexible and customizable IDE
+* writing of own plugins possible
