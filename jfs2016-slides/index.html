@@ -303,9 +303,17 @@ Listening for transport dt_socket at address: 1044</code></pre>
                 <section id="deploy_1" data-markdown>
                     ### Deployment
 					
-                    * export the jar
-                    * copy it to Raspi
-                    * execute it with java -jar <all-in-one-bundle>
+                    * comment the "remote" instruction indside bndrun file
+					<pre><code>#-runremote: \
+					#	raspberry;\
+					#		jdb=1044; \
+					#		host=&lt;ipAddress&gt;; \
+					#		shell=1
+					#-runpath</code></pre>
+                    * export the jar from the bndrun file (top right)
+                    * copy exported jar to Raspi
+                    * execute it with 
+					<pre><code>sudo java -jar &lt;all-in-one-bundle&gt;</code></pre>
                 </section>
            </section>
 
