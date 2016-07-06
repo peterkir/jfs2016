@@ -70,3 +70,26 @@ Complete tool chain for development, scm and CI, CD included
 # 6.2 Eclipse 
 * very flexible and customizable IDE
 * writing of own plugins possible
+
+# 6.3 Bndtools
+* MANIFEST.MF is generated
+* real-life/byte-code dependency management
+* flexible and versatile repository management (P2, Maven, file-based, jpm4j, ...)
+* immediate bundle creation after each save
+* Declarative Service via Java annotations (type safe and no XML)
+
+7.1 Raspi Setup
+
+7.2 one-time setup
+* installation of jpm and remote run agent
+
+7.3 development
+* launch remote agent and ready!
+
+7.4 Dev PC Setup
+* Eclipse and ... installation
+
+7.5 IDEfix installer
+* LIVE DEMO 
+
+8.x Deployment
