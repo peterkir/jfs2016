@@ -1,44 +1,42 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
 
-    <title>Jumpstart IoT in Java with OSGi enRoute</title>
+        <title>Jumpstart IoT in Java with OSGi enRoute</title>
 
-    <meta name="description" content="Jumpstart IoT in Java with OSGi enRoute">
-    <meta name="author" content="Peter Kirschner">
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/default.css" id="theme">
-
-    <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
-
-    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
-    <script>
-        if( window.location.search.match( /print-pdf/gi ) ) {
-            var link = document.createElement( 'link' );
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = 'css/print/pdf.css';
-            document.getElementsByTagName( 'head' )[0].appendChild( link );
-        }
-    </script>
+		<meta name="description" content="Jumpstart IoT in Java with OSGi enRoute">
+        <meta name="author" content="Peter Kirschner">
+    
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+        <link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+    
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+    
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
 
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
-</head>
+	</head>
 
-<body>
+	<body>
 
-    <div class="reveal">
+		<div class="reveal">
 
         <div class="slides">
             <section id="title">
@@ -49,53 +47,142 @@
                     <img src="images/enRoute/EnRouteIcon_CMYK.png"  width="20%" alt="enRoute logo" /> 
                 </a>
                 <p>
-                    <small>created by <a href="#/aboutme">Peter Kirschner</a> for <a href="http://www.java-forum-stuttgart.de/de/Home.html">Java Forum Stuttgart</a></small><br>
+                    created by <a href="#/aboutme">Peter Kirschner</a> for <a href="http://www.java-forum-stuttgart.de/de/Home.html">Java Forum Stuttgart</a>
                 </p>
-                <tiny>
+				<p>
+                <small>
                     A4, Schiller-Saal, July 07, 2016 - 12:15 to 13:00<br>
                     <a href="?print-pdf">printable version</a>
-                </tiny>
+                </small>
+                </p>
             </section>
 
-            <section id="aboutme" data-markdown>
-                ### me, myself and I
-            
-                ![](images/PeterKirschner.jpg "Peter Kirschner")
+            <section id="aboutme">
+                <h2>me, myself and I</h2>
+                <img src="images/PeterKirschner.jpg"  width="16%" alt="Peter Kirschner" style="float:left" /> 
+				<ul>
+                <li>name: Peter Kirschner
+                <li>profession: IT software engineer
+                <li>company: Kirschners GmbH
+                <li>email: &#112;e&#116;e&#114;&#064;&#107;&#105;&#114;&#115;&#099;&#104;&#110;e&#114;&#115;&#046;&#100;&#101;
+                <li>twitter: <a href="http://twitter.com/peterkir">@peterkir</a>
+                <li>github: <a href="https://github.com/peterkir/jfs2016">peterkir/jfs2016</a>
+				</ul>
+            </section>
 
-                * name: Peter Kirschner
-                * profession: IT software engineer
-				* company: Kirschners GmbH
-                * email: &#112;e&#116;e&#114;&#064;&#107;&#105;&#114;&#115;&#099;&#104;&#110;e&#114;&#115;&#046;&#100;&#101;
-                * twitter: [@peterkir](http://twitter.com/peterkir)
-                * github: https://github.com/peterkir/jfs2016
+                <section id="ingredients">
+                    <h3>Ingredients</h3>
+                    <div style="background-color:#6FA8DC;">
+                        <table>
+                            <tr>
+                                <td>
+    								<a href="http://de.farnell.com/raspberry-pi/raspberrypi-modb-1gb/raspberry-pi-3-model-b/dp/2525225">
+    									<img src="images/pi/raspi.jpg" height="80px" /></a>
+   									<img src="images/Lenovo_ThinkPad_X1_Ultrabook.jpg" height="80px" />
+    								<a href="https://www.amazon.de/Sunfounder-Project-Starter-Raspberry-English/dp/B00P2E9W30/ref=sr_1_1?ie=UTF8&qid=1467546453&sr=8-1&keywords=sunfounder+kit+raspberry">
+    									<img src="images/pi/SunFounderKit.jpg" height="80px" /></a>
+    								<a href="https://www.amazon.de/Sunfounder-Project-Starter-Raspberry-English/dp/B00P2E9W30/ref=sr_1_1?ie=UTF8&qid=1467546453&sr=8-1&keywords=sunfounder+kit+raspberry">
+    									<img src="images/pi/RaspberryPi_Touchscreen.jpg" height="80px" /></a>
+    							</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="background-color:#B6D7A8;">
+                        <table>
+                            <tr>
+                                <td>
+    								<a href="https://www.raspberrypi.org/downloads/raspbian/">
+    									<img src="images/pi/raspbian_logo.jpg" height="80px" /></a>
+    								<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">
+    									<img src="images/java8.png" height="80px" /></a>
+    								<a href="https://www.eclipse.org/downloads/packages/eclipse-ide-eclipse-committers/neonr">
+    									<img src="images/eclipse_bckgr_logo_fc_lg.jpg" height="80px" /></a>
+    								<a href="http://bndtools.org/">
+    									<img src="images/bndtools_text+logo_110x80.png" height="80px" /></a>
+    								<a href="http://enroute.osgi.org/">
+    									<img src="images/enRoute/OSGi-enRoute1.png" height="80px" /></a>
+    							</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="background-color:#FFE599;">
+                        <table>
+                            <tr>
+                                <td>
+    								<a href="https://github.com">
+    									<img src="images/blog-github.png" height="80px" /></a>
+    								<a href="https://travis-ci.org/">
+    									<img src="images/large_Mascot-fullcolor-png.png" height="80px" /></a>
+    								<a href="https://jpm4j.org">
+    									<img src="images/enRoute/jpm4j.png" height="80px" /></a>
+    							</td>
+                            </tr>
+                        </table>
+                    </div>
+                <small>click on the ingredients</small>
+                </section>
             </section>
 
             <section id="motivation">
                 <section id="motivation_0" data-markdown>
-                    ### Why in Java8
+                    # Motivation
+                </section>
+                <section id="motivation_1" data-markdown>
+                    ### Why IOT in Java with OSGi?
+                    
+                    "**IoT** is dealing with **constant catastrophic failures**"
+                    
+                    "The **Dynamic Module System** for Java"
+    				
+                    "**Java and OSGi** are industry robust and proven technologies"
+    
+                    "**continuous evolution** - no revolution"
+                </section>
+            </section>
+            <section id="technology">
+                <section id="technology_0" data-markdown>
+                    # Technology
+                </section>
+                <section id="motivation_Java" data-markdown>
+                    ### Java Language
                     * Java SE 8 release in 2014
-
                     * Language feature improvements
                         * Lambda expressions
                         * Stream API improvements
-                        * Java Mission Control
-				    <aside class="notes">
-                       finally some functional programming
-					   application monitoring 
-                    </aside>	
+                    * Java Mission Control
                 </section>
-                <section id="motivation_1" data-markdown>
-                    ### OSGi
-                    * Modularity to handle complexity
+                <section id="technology_OSGi1" data-markdown>
+                    ### OSGi modularity
+                    #### Divide and conquer
                     ![OSGi complexity](images/enRoute/complexity-1.png)
                 </section>
-                <section id="motivation_2" data-markdown>
-                    ### OSGi
-					* Modularity to handle complexity
-                    ![OSGi layering](layering-osgi.png)
+                <section id="technology__OSGi2" data-markdown>
+                    ### OSGi architecture
+                    #### Modular and Layered Architecture
+                    ![OSGi layering](images/enRoute/layering-osgi.png)
                 </section>
-                <section id="motivation_2">
-                    <h3>Bndtools</h3>
+                <section id="technology__OSGi3" data-markdown>
+                    ### OSGi services
+                    #### Declarative Services & Configuration
+                    #### Service Registry via Broker Pattern
+                    ![OSGi layering](images/enRoute/services.png)
+                </section>
+                <section id="technology__OSGi4">
+                   <img src="images/enRoute/front-page-2000.jpg" alt="enRoute" height="150px" />
+                    <ul>
+						<li>Community​ - you are invited</li>
+                        <li>Programming Model - <small valign="center">best practice, µservice-based development model​</small></li>
+                        <li>Tool Chain - ​supports the OSGi programming model over all the stages of development</li>
+                        <li>​Education- tutorials and examples</li>
+					</ul>
+                </section>
+            </section>
+            <section id="Tools">
+                <section id="technology_0" data-markdown>
+                    # Tools
+                </section>
+                <section id="tools1">
+                    <h3>Bndtools 1</h3>
                     <div style="position: relative;">
 <!--
                     <img src="images/text_really.png" style="position: absolute; top: 30px; left: 460px; border-style=solid; border:0px; background-color:#e4decd;"/>
@@ -103,7 +190,7 @@
                     <table>
                         <tr>
                             <td>automated import package analysis including versioning</td>
-                            <td><img src="images/about01.png" alt="bndImportAnalysis" width="70%" /></td>
+                            <td><img src="images/about01.png" alt="bndImportAnalysis" /></td>
                         </tr>
                         <tr>
                             <td>powerful OSGi bundle repository management</td>
@@ -373,40 +460,33 @@
         </div>
     </div>
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
 
-    <script>
+		<script>
 
-        // Full list of configuration options available here:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
-            o: true,
-            slideNumber: true,
-            
-            theme: Reveal.getQueryHash().theme || 'solarized_pk', // beige,blood,default,moon,night,serif,simple,sky,solarized
-            transition: Reveal.getQueryHash().transition || 'cube', // default/cube/page/concave/zoom/linear/fade/none
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                slideNumber: true,
+				
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-            // Parallax scrolling
-            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-            // parallaxBackgroundSize: '2100px 900px',
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
 
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-            ]
-        });
+		</script>
 
-    </script>
-
-</body>
+	</body>
 </html>
